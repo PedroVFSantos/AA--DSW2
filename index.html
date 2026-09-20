@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b5e20">
+  <title>TrilhaBR - Descubra trilhas e percursos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="tailwindOutput.css" rel="stylesheet">
+</head>
+<body class="bg-areia pb-16 text-stone-900 md:pb-0">
+  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
+      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
+        <a href="index.html" class="nav-link" aria-current="page">Explorar</a>
+        <a href="saidas.html" class="nav-link">Saídas</a>
+        <a href="criar.html" class="nav-link">Criar</a>
+        <a href="perfil.html" class="nav-link">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-4">
+    <section class="mb-6 rounded-2xl bg-gradient-to-br from-floresta-900 via-floresta-800 to-floresta-600 px-6 py-10 text-white md:px-10 md:py-14">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-brasa-300">Trilhas e corridas</p>
+      <h1 class="max-w-xl text-3xl leading-tight font-extrabold md:text-5xl">Sua próxima aventura começa aqui</h1>
+      <p class="mt-3 mb-6 max-w-lg text-white/90">Encontre trilhas e percursos de corrida perto de você e marque saídas em grupo.</p>
+      <a href="saidas.html" class="btn">Ver saídas em grupo</a>
+    </section>
+
+    <input type="search" placeholder="Buscar trilha, cidade ou percurso"
+      class="mb-4 w-full rounded-full bg-white px-5 py-3.5 shadow-md focus:ring-4 focus:ring-floresta-100 focus:outline-none">
+
+    <div class="flex gap-2 overflow-x-auto pb-2" role="group" aria-label="Filtros">
+      <button class="chip" aria-pressed="true">Todas</button>
+      <button class="chip" aria-pressed="false">Trilhas</button>
+      <button class="chip" aria-pressed="false">Corridas</button>
+      <button class="chip" aria-pressed="false">Fácil</button>
+      <button class="chip" aria-pressed="false">Moderada</button>
+      <button class="chip" aria-pressed="false">Difícil</button>
+      <button class="chip" aria-pressed="false">Até 5 km</button>
+    </div>
+
+    <h2 class="mt-6 mb-3 text-xl font-bold">Perto de você</h2>
+
+    <section class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="trilha.html" class="card">
+        <div class="capa"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-moderada">Moderada</span></div>
+          <h3 class="text-lg font-bold">Trilha da Cachoeira Escondida</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">6,2 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">320 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">2h30</dd></div>
+          </dl>
+        </div>
+      </a>
+
+      <a href="trilha.html" class="card">
+        <div class="capa capa-lago"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-corrida">Corrida</span><span class="selo selo-facil">Fácil</span></div>
+          <h3 class="text-lg font-bold">Circuito da Lagoa</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">5,0 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">20 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">30 min</dd></div>
+          </dl>
+        </div>
+      </a>
+
+      <a href="trilha.html" class="card">
+        <div class="capa capa-serra"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-dificil">Difícil</span></div>
+          <h3 class="text-lg font-bold">Pico do Gavião</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">9,8 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">780 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">5h</dd></div>
+          </dl>
+        </div>
+      </a>
+
+      <a href="trilha.html" class="card">
+        <div class="capa capa-mirante"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-facil">Fácil</span></div>
+          <h3 class="text-lg font-bold">Caminho do Mirante</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">3,4 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">110 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">1h15</dd></div>
+          </dl>
+        </div>
+      </a>
+
+      <a href="trilha.html" class="card">
+        <div class="capa capa-lago"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-corrida">Corrida</span><span class="selo selo-moderada">Moderada</span></div>
+          <h3 class="text-lg font-bold">Volta do Campus</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">7,5 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">60 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">45 min</dd></div>
+          </dl>
+        </div>
+      </a>
+
+      <a href="trilha.html" class="card">
+        <div class="capa"></div>
+        <div class="p-4">
+          <div class="mb-2 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-dificil">Difícil</span></div>
+          <h3 class="text-lg font-bold">Serra das Araras</h3>
+          <dl class="mt-3 grid grid-cols-3 text-center">
+            <div><dt class="rotulo">Distância</dt><dd class="font-bold">12 km</dd></div>
+            <div><dt class="rotulo">Subida</dt><dd class="font-bold">640 m</dd></div>
+            <div><dt class="rotulo">Tempo</dt><dd class="font-bold">4h30</dd></div>
+          </dl>
+        </div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+
+  --color-floresta-50: #eef6ee;
+  --color-floresta-100: #d8ebd9;
+  --color-floresta-600: #2e7d32;
+  --color-floresta-700: #256628;
+  --color-floresta-800: #1b5e20;
+  --color-floresta-900: #123f16;
+
+  --color-brasa-300: #ffab91;
+  --color-brasa-500: #ff7043;
+  --color-brasa-600: #f4511e;
+
+  --color-terra-700: #6d4c41;
+  --color-areia: #f6f5f0;
+}
+
+/* Componentes reutilizáveis (Tailwind: "Reusing styles") */
+@layer components {
+  .nav-link {
+    @apply flex-1 py-3.5 text-center text-sm font-semibold text-stone-500
+      md:flex-none md:rounded-full md:px-4 md:py-2 md:text-white/80 md:hover:bg-white/15
+      aria-[current=page]:text-floresta-700 md:aria-[current=page]:bg-white/20 md:aria-[current=page]:text-white;
+  }
+
+  .btn {
+    @apply inline-block cursor-pointer rounded-full bg-brasa-500 px-6 py-3 text-center font-semibold text-white
+      shadow-md transition hover:-translate-y-0.5 hover:bg-brasa-600 hover:shadow-lg;
+  }
+  .btn-verde { @apply bg-floresta-600 hover:bg-floresta-700; }
+  .btn-borda {
+    @apply border-2 border-floresta-600 bg-transparent text-floresta-700 shadow-none hover:bg-floresta-50 hover:shadow-none;
+  }
+
+  .chip {
+    @apply flex-none cursor-pointer rounded-full border border-stone-300 bg-white px-4 py-2 text-sm
+      transition hover:border-floresta-600 aria-pressed:border-floresta-600 aria-pressed:bg-floresta-600 aria-pressed:text-white;
+  }
+
+  .card { @apply overflow-hidden rounded-2xl bg-white shadow-md; }
+  a.card { @apply transition hover:-translate-y-1 hover:shadow-xl; }
+
+  .selo { @apply inline-block rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-white; }
+  .selo-trilha { @apply bg-terra-700; }
+  .selo-corrida { @apply bg-sky-700; }
+  .selo-facil { @apply bg-emerald-600; }
+  .selo-moderada { @apply bg-amber-500 text-stone-900; }
+  .selo-dificil { @apply bg-red-700; }
+
+  .campo { @apply grid gap-1.5; }
+  .campo label { @apply text-sm font-semibold; }
+  .campo input, .campo select, .campo textarea {
+    @apply w-full rounded-xl border border-stone-300 bg-white px-3.5 py-3
+      focus:border-floresta-600 focus:ring-4 focus:ring-floresta-100 focus:outline-none;
+  }
+
+  .num-destaque { @apply text-2xl font-extrabold text-floresta-700; }
+  .rotulo { @apply text-xs uppercase tracking-wide text-stone-500; }
+
+  /* "Foto" da trilha: gradiente + silhueta de serra feita só com CSS */
+  .capa { @apply relative h-44 overflow-hidden bg-gradient-to-br from-floresta-600 to-floresta-900; }
+  .capa::after {
+    content: "";
+    @apply absolute inset-x-0 bottom-0 h-20 bg-black/25;
+    clip-path: polygon(0 100%, 0 65%, 15% 35%, 28% 58%, 48% 12%, 68% 55%, 82% 30%, 100% 62%, 100% 100%);
+  }
+  .capa-lago { @apply from-sky-500 to-sky-900; }
+  .capa-serra { @apply from-amber-600 to-stone-800; }
+  .capa-mirante { @apply from-lime-500 to-floresta-800; }
+  .capa-grande { @apply h-56 md:h-72; }
+}

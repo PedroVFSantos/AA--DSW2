@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b5e20">
+  <title>Trilha da Cachoeira Escondida - TrilhaBR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="tailwindOutput.css" rel="stylesheet">
+</head>
+<body class="bg-areia pb-16 text-stone-900 md:pb-0">
+  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
+      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
+        <a href="index.html" class="nav-link" aria-current="page">Explorar</a>
+        <a href="saidas.html" class="nav-link">Saídas</a>
+        <a href="criar.html" class="nav-link">Criar</a>
+        <a href="perfil.html" class="nav-link">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-4">
+    <a href="index.html" class="text-sm text-stone-500 hover:text-floresta-700">Voltar para explorar</a>
+
+    <div class="mt-3 grid gap-6 lg:grid-cols-3 lg:items-start">
+      <div class="grid gap-6 lg:col-span-2">
+        <article class="card">
+          <div class="capa capa-grande"></div>
+          <div class="p-5">
+            <div class="mb-3 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-moderada">Moderada</span></div>
+            <h1 class="text-2xl font-extrabold md:text-3xl">Trilha da Cachoeira Escondida</h1>
+            <p class="mt-3 text-stone-700">Caminho de terra em meio à mata, com travessia de riacho e uma cachoeira de 15 m no final. Leve calçado fechado e água.</p>
+          </div>
+        </article>
+
+        <section class="card p-5">
+          <h2 class="mb-4 text-xl font-bold">Números da trilha</h2>
+          <dl class="grid grid-cols-3 text-center">
+            <div><dd class="num-destaque">6,2 km</dd><dt class="rotulo">Distância</dt></div>
+            <div><dd class="num-destaque">320 m</dd><dt class="rotulo">Subida</dt></div>
+            <div><dd class="num-destaque">2h30</dd><dt class="rotulo">Tempo</dt></div>
+          </dl>
+          <h3 class="mt-6 mb-2 font-bold">Altimetria</h3>
+          <div class="flex h-24 items-end gap-1" role="img" aria-label="Gráfico de altimetria da trilha">
+            <span class="flex-1 rounded-t bg-floresta-100" style="height:15%"></span>
+            <span class="flex-1 rounded-t bg-floresta-100" style="height:22%"></span>
+            <span class="flex-1 rounded-t bg-floresta-100" style="height:30%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:45%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:40%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:58%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:70%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:85%"></span>
+            <span class="flex-1 rounded-t bg-floresta-800" style="height:100%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:80%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:60%"></span>
+            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:42%"></span>
+            <span class="flex-1 rounded-t bg-floresta-100" style="height:30%"></span>
+            <span class="flex-1 rounded-t bg-floresta-100" style="height:20%"></span>
+          </div>
+          <div class="mt-1 flex justify-between text-xs text-stone-500"><span>Início</span><span>Cachoeira</span></div>
+        </section>
+
+        <section class="card p-5">
+          <h2 class="mb-3 text-xl font-bold">Avaliações <span class="font-normal text-stone-500">(4,6 de 5)</span></h2>
+          <ul class="divide-y divide-stone-200">
+            <li class="flex gap-3 py-3">
+              <div class="flex size-11 flex-none items-center justify-center rounded-full bg-terra-700 font-bold text-white">M</div>
+              <div><p class="font-bold">Marina <span class="font-normal text-stone-500">· 5 de 5</span></p><p class="text-stone-600">Vale cada passo! Cachoeira linda.</p></div>
+            </li>
+            <li class="flex gap-3 py-3">
+              <div class="flex size-11 flex-none items-center justify-center rounded-full bg-terra-700 font-bold text-white">R</div>
+              <div><p class="font-bold">Rafael <span class="font-normal text-stone-500">· 4 de 5</span></p><p class="text-stone-600">Trecho final é bem íngreme, atenção.</p></div>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="grid gap-6">
+        <section class="card p-5">
+          <h2 class="text-lg font-bold">Previsão para sábado</h2>
+          <p class="mt-1 text-3xl font-extrabold text-floresta-700">26 °C</p>
+          <p class="text-stone-600">Céu limpo, sem chuva</p>
+          <a href="saidas.html" class="btn mt-4 block">Marcar saída</a>
+          <button class="btn btn-borda mt-3 block w-full">Adicionar aos favoritos</button>
+        </section>
+        <section class="card p-5">
+          <h3 class="font-bold">Como chegar</h3>
+          <p class="mt-2 text-stone-600">Estacionamento da Fazenda Boa Vista, a 12 km do centro.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

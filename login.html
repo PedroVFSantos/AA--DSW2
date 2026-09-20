@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b5e20">
+  <title>Entrar - TrilhaBR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="tailwindOutput.css" rel="stylesheet">
+</head>
+<body class="min-h-dvh bg-areia text-stone-900 md:grid md:grid-cols-2">
+  <section class="capa !h-auto flex flex-col justify-center px-6 py-12 text-white md:min-h-dvh md:px-14">
+    <div class="relative z-10">
+      <p class="text-4xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></p>
+      <p class="mt-3 max-w-sm text-lg text-white/90">Trilhas, corridas e boa companhia.</p>
+    </div>
+  </section>
+
+  <main class="flex items-center justify-center p-4 md:p-10">
+    <form class="card grid w-full max-w-md gap-5 p-6 md:p-8" action="index.html">
+      <h1 class="text-2xl font-extrabold">Entrar</h1>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="voce@email.com">
+      </div>
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="Sua senha">
+      </div>
+      <button type="submit" class="btn btn-verde">Entrar</button>
+      <p class="text-center text-sm text-stone-600">Ainda não tem conta? <a href="login.html" class="font-bold text-brasa-600 hover:underline">Cadastre-se</a></p>
+    </form>
+  </main>
+</body>
+</html>

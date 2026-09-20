@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b5e20">
+  <title>Saídas em grupo - TrilhaBR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="tailwindOutput.css" rel="stylesheet">
+</head>
+<body class="bg-areia pb-16 text-stone-900 md:pb-0">
+  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
+      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
+        <a href="index.html" class="nav-link">Explorar</a>
+        <a href="saidas.html" class="nav-link" aria-current="page">Saídas</a>
+        <a href="criar.html" class="nav-link">Criar</a>
+        <a href="perfil.html" class="nav-link">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-4">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <h1 class="text-3xl font-extrabold">Saídas em grupo</h1>
+        <p class="text-stone-600">Encontre companhia para a próxima aventura.</p>
+      </div>
+      <a href="criar.html" class="btn hidden md:inline-block">Criar nova saída</a>
+    </div>
+
+    <div class="mt-4 flex gap-2 overflow-x-auto pb-2" role="group" aria-label="Filtros">
+      <button class="chip" aria-pressed="true">Próximas</button>
+      <button class="chip" aria-pressed="false">Esta semana</button>
+      <button class="chip" aria-pressed="false">Trilhas</button>
+      <button class="chip" aria-pressed="false">Corridas</button>
+    </div>
+
+    <section class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="card flex flex-col border-l-8 border-terra-700 p-5">
+        <div class="flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-moderada">Moderada</span></div>
+        <h2 class="mt-3 text-lg font-bold">Cachoeira Escondida</h2>
+        <p class="mt-1 font-semibold text-floresta-700">Sábado, 26/09 às 07h</p>
+        <p class="text-stone-600">Ponto de encontro: portão da Fazenda Boa Vista</p>
+        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Marina</strong></p>
+        <div class="mt-4">
+          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>5 de 8</strong></div>
+          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-[62%] rounded-full bg-floresta-600"></div></div>
+        </div>
+        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+      </article>
+
+      <article class="card flex flex-col border-l-8 border-sky-700 p-5">
+        <div class="flex gap-2"><span class="selo selo-corrida">Corrida</span><span class="selo selo-facil">Fácil</span></div>
+        <h2 class="mt-3 text-lg font-bold">Treino leve na Lagoa</h2>
+        <p class="mt-1 font-semibold text-floresta-700">Terça, 22/09 às 18h30</p>
+        <p class="text-stone-600">Ponto de encontro: entrada principal da Lagoa</p>
+        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Rafael</strong></p>
+        <div class="mt-4">
+          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>9 de 15</strong></div>
+          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-[60%] rounded-full bg-floresta-600"></div></div>
+        </div>
+        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+      </article>
+
+      <article class="card flex flex-col border-l-8 border-terra-700 p-5">
+        <div class="flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-dificil">Difícil</span></div>
+        <h2 class="mt-3 text-lg font-bold">Pico do Gavião: nascer do sol</h2>
+        <p class="mt-1 font-semibold text-floresta-700">Domingo, 27/09 às 04h30</p>
+        <p class="text-stone-600">Ponto de encontro: estacionamento da base</p>
+        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Bia</strong></p>
+        <div class="mt-4">
+          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>3 de 6</strong></div>
+          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-1/2 rounded-full bg-floresta-600"></div></div>
+        </div>
+        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+      </article>
+    </section>
+
+    <a href="criar.html" class="btn mt-6 block md:hidden">Criar nova saída</a>
+  </main>
+</body>
+</html>

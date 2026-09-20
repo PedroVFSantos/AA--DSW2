@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b5e20">
+  <title>Meu perfil - TrilhaBR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="tailwindOutput.css" rel="stylesheet">
+</head>
+<body class="bg-areia pb-16 text-stone-900 md:pb-0">
+  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
+      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
+        <a href="index.html" class="nav-link">Explorar</a>
+        <a href="saidas.html" class="nav-link">Saídas</a>
+        <a href="criar.html" class="nav-link">Criar</a>
+        <a href="perfil.html" class="nav-link" aria-current="page">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl p-4">
+    <section class="card text-center">
+      <div class="h-24 bg-gradient-to-r from-floresta-800 to-floresta-600"></div>
+      <div class="-mt-12 px-5 pb-6">
+        <div class="mx-auto flex size-24 items-center justify-center rounded-full border-4 border-white bg-terra-700 text-4xl font-bold text-white shadow-md">P</div>
+        <h1 class="mt-2 text-2xl font-extrabold">Pedro</h1>
+        <p class="text-stone-600">Trilheiro e corredor · São Carlos, SP</p>
+        <dl class="mx-auto mt-5 grid max-w-md grid-cols-3">
+          <div><dd class="num-destaque">128</dd><dt class="rotulo">km percorridos</dt></div>
+          <div><dd class="num-destaque">14</dd><dt class="rotulo">trilhas</dt></div>
+          <div><dd class="num-destaque">6</dd><dt class="rotulo">saídas</dt></div>
+        </dl>
+        <a href="login.html" class="btn btn-borda mt-5">Sair</a>
+      </div>
+    </section>
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-2">
+      <section class="card p-5">
+        <h2 class="mb-3 text-xl font-bold">Conquistas</h2>
+        <div class="grid grid-cols-3 gap-3 text-center text-sm">
+          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">1ª</p>Primeira trilha</div>
+          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">500 m</p>de subida</div>
+          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">10 km</p>corridos</div>
+          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">Sol</p>Nascer do sol</div>
+          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">10</p>saídas</div>
+          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">100 km</p>em trilhas</div>
+        </div>
+      </section>
+
+      <section class="card p-5">
+        <h2 class="mb-3 text-xl font-bold">Próximas saídas</h2>
+        <ul class="divide-y divide-stone-200">
+          <li class="flex items-center justify-between py-3"><div><p class="font-bold">Cachoeira Escondida</p><p class="text-sm text-stone-500">Sábado, 26/09 às 07h</p></div><span class="selo selo-trilha">Trilha</span></li>
+          <li class="flex items-center justify-between py-3"><div><p class="font-bold">Treino na Lagoa</p><p class="text-sm text-stone-500">Terça, 22/09 às 18h30</p></div><span class="selo selo-corrida">Corrida</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card mt-6 p-5">
+      <h2 class="mb-3 text-xl font-bold">Favoritas</h2>
+      <ul class="divide-y divide-stone-200">
+        <li class="flex items-center justify-between py-3"><a href="trilha.html" class="hover:text-floresta-700"><p class="font-bold">Serra das Araras</p><p class="text-sm text-stone-500">12 km</p></a><span class="selo selo-dificil">Difícil</span></li>
+        <li class="flex items-center justify-between py-3"><a href="trilha.html" class="hover:text-floresta-700"><p class="font-bold">Caminho do Mirante</p><p class="text-sm text-stone-500">3,4 km</p></a><span class="selo selo-facil">Fácil</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

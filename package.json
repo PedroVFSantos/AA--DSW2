@@ -1,0 +1,14 @@
+{
+  "name": "trilhabr",
+  "version": "1.0.0",
+  "description": "TrilhaBR - AA1 de Desenvolvimento de Software para Web 2",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./tailwindInput.css -o ./tailwindOutput.css --minify",
+    "tailwind-watch": "npx @tailwindcss/cli -i ./tailwindInput.css -o ./tailwindOutput.css --watch"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
