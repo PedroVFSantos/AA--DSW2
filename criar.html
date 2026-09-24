@@ -2,68 +2,136 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1b5e20">
-  <title>Criar saída - TrilhaBR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#256628">
+  <title>Criar saída | TrilhaBR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="tailwindOutput.css" rel="stylesheet">
 </head>
-<body class="bg-areia pb-16 text-stone-900 md:pb-0">
-  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
-      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
-        <a href="index.html" class="nav-link">Explorar</a>
-        <a href="saidas.html" class="nav-link">Saídas</a>
-        <a href="criar.html" class="nav-link" aria-current="page">Criar</a>
-        <a href="perfil.html" class="nav-link">Perfil</a>
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
+  <header class="sticky top-0 z-20 border-b border-border bg-background md:bg-background/85 md:backdrop-blur-md">
+    <div class="container-app mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 lg:px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+        <span>Trilha<span class="text-brasa-600">BR</span></span>
+      </a>
+      <nav class="barra-nav md:flex md:items-center md:gap-1" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>Explorar</a>
+        <a href="saidas.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Saídas</a>
+        <a href="criar.html" class="nav-link" aria-current="page"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar</a>
+        <a href="perfil.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
       </nav>
+      <div class="flex items-center gap-3">
+        <a href="criar.html" class="btn hidden lg:inline-flex" data-variant="brasa"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar saída</a>
+        <a href="perfil.html" class="avatar" data-size="lg" aria-label="Meu perfil"><span class="bg-terra-700! font-bold text-white!">PV</span></a>
+      </div>
     </div>
   </header>
 
-  <main class="mx-auto max-w-2xl p-4">
-    <h1 class="text-3xl font-extrabold">Criar saída</h1>
-    <p class="text-stone-600">Convide a galera para o seu próximo rolê.</p>
+  <main class="container-app mx-auto max-w-6xl px-4 pt-6 lg:px-6 lg:pt-10">
+    <a href="saidas.html" class="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Saídas</a>
+    <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Criar saída</h1>
+    <p class="mt-1 text-muted-foreground">Convide a galera para o seu próximo rolê.</p>
 
-    <form class="card mt-5 grid gap-5 p-5 md:p-7" action="#" method="post">
-      <div class="campo">
-        <label for="titulo">Nome da saída</label>
-        <input id="titulo" type="text" placeholder="Ex.: Cachoeira Escondida, sábado cedo">
-      </div>
+    <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_22rem] lg:items-start">
+      <form class="card" action="saidas.html" method="get">
+        <header class="border-b border-border">
+          <h2>Sobre a saída</h2>
+          <p>Essas informações aparecem no card da saída.</p>
+        </header>
+        <section class="grid gap-6">
+          <div class="field">
+            <label for="titulo">Nome da saída</label>
+            <input id="titulo" type="text" placeholder="Ex.: Cachoeira Escondida, sábado cedo" required>
+          </div>
 
-      <div class="grid gap-5 sm:grid-cols-2">
-        <div class="campo">
-          <label for="tipo">Tipo</label>
-          <select id="tipo"><option>Trilha</option><option>Corrida</option></select>
+          <fieldset class="grid gap-3">
+            <legend class="mb-3 text-sm font-medium">Tipo</legend>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="opcao"><input type="radio" name="tipo" value="trilha" checked><span class="flex size-9 items-center justify-center rounded-lg bg-terra-700/10 text-terra-700"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>Trilha</label>
+              <label class="opcao"><input type="radio" name="tipo" value="corrida"><span class="flex size-9 items-center justify-center rounded-lg bg-sky-700/10 text-sky-700"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg></span>Corrida</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="mb-3 text-sm font-medium">Dificuldade</legend>
+            <div class="grid grid-cols-1 gap-3 xs:grid-cols-3">
+              <label class="opcao"><input type="radio" name="nivel" value="facil"><span class="size-2.5 rounded-full bg-emerald-500"></span>Fácil</label>
+              <label class="opcao"><input type="radio" name="nivel" value="moderada" checked><span class="size-2.5 rounded-full bg-amber-500"></span>Moderada</label>
+              <label class="opcao"><input type="radio" name="nivel" value="dificil"><span class="size-2.5 rounded-full bg-red-600"></span>Difícil</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="trilha">Trilha ou percurso</label>
+            <select id="trilha" class="w-full!">
+              <option>Trilha da Cachoeira Escondida</option><option>Circuito da Lagoa</option><option>Pico do Gavião</option><option>Caminho do Mirante</option><option>Volta do Campus</option><option>Serra das Araras</option>
+            </select>
+          </div>
+        </section>
+
+        <header class="border-y border-border py-6">
+          <h2>Quando e onde</h2>
+          <p>Combine um ponto fácil de achar.</p>
+        </header>
+        <section class="grid gap-6">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div class="field"><label for="data">Data</label><input id="data" type="date" value="2026-09-26"></div>
+            <div class="field"><label for="hora">Horário</label><input id="hora" type="time" value="07:00"></div>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-3">
+            <div class="field sm:col-span-2">
+              <label for="local">Ponto de encontro</label>
+              <input id="local" type="text" placeholder="Endereço ou referência">
+            </div>
+            <div class="field"><label for="vagas">Vagas</label><input id="vagas" type="number" min="2" max="50" value="8"></div>
+          </div>
+          <div class="field">
+            <label for="desc">Descrição</label>
+            <textarea id="desc" rows="4" placeholder="Nível do grupo, o que levar, ritmo, carona..."></textarea>
+            <p class="text-sm text-muted-foreground">Dica: diga o ritmo esperado para ninguém ficar para trás.</p>
+          </div>
+          <label class="flex items-start gap-3 text-sm"><input type="checkbox" class="input mt-0.5" checked><span><strong>Aceitar carona compartilhada</strong><br><span class="text-muted-foreground">Participantes podem oferecer ou pedir carona.</span></span></label>
+        </section>
+
+        <footer class="flex flex-col-reverse gap-3 border-t border-border pt-6 xs:flex-row xs:justify-end">
+          <a href="saidas.html" class="btn" data-variant="ghost" data-size="lg">Cancelar</a>
+          <button type="submit" class="btn" data-size="lg"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Publicar saída</button>
+        </footer>
+      </form>
+
+      <aside class="lateral-fixa hidden lg:block" aria-label="Pré-visualização">
+        <p class="mb-3 text-sm font-medium text-muted-foreground">Como vai aparecer</p>
+        <article class="card pt-0">
+          <div class="foto foto-sombra aspect-[16/9]">
+            <img src="img/cachoeira-720.webp" srcset="img/cachoeira-720.webp 720w, img/cachoeira.webp 1600w" sizes="22rem" alt="" loading="lazy" decoding="async">
+            <div class="data-bloco absolute bottom-3 left-3 z-10"><b>26</b><small>set</small></div>
+          </div>
+          <section class="grid gap-3">
+            <div class="flex gap-2"><span class="badge" data-variant="secondary">Trilha</span><span class="badge" data-variant="outline" data-nivel="moderada">Moderada</span></div>
+            <h2 class="text-lg font-bold text-muted-foreground/70">Nome da saída</h2>
+            <p class="flex items-center gap-2 text-muted-foreground"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Sábado, 07h00</p>
+            <div class="vagas"><span style="width:12%"></span></div>
+          </section>
+        </article>
+        <div class="mt-4 rounded-xl border border-dashed border-input p-4 text-sm text-muted-foreground">
+          <p class="flex items-center gap-2 font-semibold text-foreground"><svg class="size-4 text-brasa-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg>Boas práticas</p>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li>Confira a previsão do tempo antes.</li>
+            <li>Combine um horário de volta.</li>
+            <li>Avise se a trilha exige experiência.</li>
+          </ul>
         </div>
-        <div class="campo">
-          <label for="dif">Dificuldade</label>
-          <select id="dif"><option>Fácil</option><option>Moderada</option><option>Difícil</option></select>
-        </div>
-      </div>
-
-      <div class="grid gap-5 sm:grid-cols-2">
-        <div class="campo"><label for="data">Data</label><input id="data" type="date"></div>
-        <div class="campo"><label for="hora">Horário</label><input id="hora" type="time"></div>
-      </div>
-
-      <div class="grid gap-5 sm:grid-cols-3">
-        <div class="campo sm:col-span-2">
-          <label for="local">Ponto de encontro</label>
-          <input id="local" type="text" placeholder="Endereço ou referência">
-        </div>
-        <div class="campo"><label for="vagas">Vagas</label><input id="vagas" type="number" min="1" value="8"></div>
-      </div>
-
-      <div class="campo">
-        <label for="desc">Descrição</label>
-        <textarea id="desc" rows="4" placeholder="Nível do grupo, o que levar, ritmo..."></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-verde">Publicar saída</button>
-    </form>
+      </aside>
+    </div>
   </main>
+  <footer class="nao-imprimir mt-16 border-t border-border">
+    <div class="container-app mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-6">
+      <p><strong class="text-foreground">Trilha<span class="text-brasa-600">BR</span></strong> · Pedro Vinicius, Lucas Crempe e Vinicius Massuda · DSW2, DC-UFSCar</p>
+      <p>Fotos: Wikimedia Commons (<a href="img/CREDITOS.md" class="underline underline-offset-4 hover:text-foreground">créditos</a>)</p>
+    </div>
+  </footer>
 </body>
 </html>

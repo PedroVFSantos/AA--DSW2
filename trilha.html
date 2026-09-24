@@ -2,97 +2,160 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1b5e20">
-  <title>Trilha da Cachoeira Escondida - TrilhaBR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#256628">
+  <title>Trilha da Cachoeira Escondida | TrilhaBR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="tailwindOutput.css" rel="stylesheet">
 </head>
-<body class="bg-areia pb-16 text-stone-900 md:pb-0">
-  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
-      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
-        <a href="index.html" class="nav-link" aria-current="page">Explorar</a>
-        <a href="saidas.html" class="nav-link">Saídas</a>
-        <a href="criar.html" class="nav-link">Criar</a>
-        <a href="perfil.html" class="nav-link">Perfil</a>
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
+  <header class="sticky top-0 z-20 border-b border-border bg-background md:bg-background/85 md:backdrop-blur-md">
+    <div class="container-app mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 lg:px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+        <span>Trilha<span class="text-brasa-600">BR</span></span>
+      </a>
+      <nav class="barra-nav md:flex md:items-center md:gap-1" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link" aria-current="page"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>Explorar</a>
+        <a href="saidas.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Saídas</a>
+        <a href="criar.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar</a>
+        <a href="perfil.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
       </nav>
+      <div class="flex items-center gap-3">
+        <a href="criar.html" class="btn hidden lg:inline-flex" data-variant="brasa"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar saída</a>
+        <a href="perfil.html" class="avatar" data-size="lg" aria-label="Meu perfil"><span class="bg-terra-700! font-bold text-white!">PV</span></a>
+      </div>
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl p-4">
-    <a href="index.html" class="text-sm text-stone-500 hover:text-floresta-700">Voltar para explorar</a>
+  <main class="container-app mx-auto max-w-6xl px-4 pt-4 lg:px-6 lg:pt-6">
+    <nav aria-label="Você está em" class="mb-4 flex items-center gap-1 text-sm text-muted-foreground">
+      <a href="index.html" class="flex items-center gap-1 hover:text-foreground"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Explorar</a>
+      <span aria-hidden="true">/</span><span class="truncate text-foreground">Trilha da Cachoeira Escondida</span>
+    </nav>
 
-    <div class="mt-3 grid gap-6 lg:grid-cols-3 lg:items-start">
-      <div class="grid gap-6 lg:col-span-2">
-        <article class="card">
-          <div class="capa capa-grande"></div>
-          <div class="p-5">
-            <div class="mb-3 flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-moderada">Moderada</span></div>
-            <h1 class="text-2xl font-extrabold md:text-3xl">Trilha da Cachoeira Escondida</h1>
-            <p class="mt-3 text-stone-700">Caminho de terra em meio à mata, com travessia de riacho e uma cachoeira de 15 m no final. Leve calçado fechado e água.</p>
-          </div>
-        </article>
-
-        <section class="card p-5">
-          <h2 class="mb-4 text-xl font-bold">Números da trilha</h2>
-          <dl class="grid grid-cols-3 text-center">
-            <div><dd class="num-destaque">6,2 km</dd><dt class="rotulo">Distância</dt></div>
-            <div><dd class="num-destaque">320 m</dd><dt class="rotulo">Subida</dt></div>
-            <div><dd class="num-destaque">2h30</dd><dt class="rotulo">Tempo</dt></div>
-          </dl>
-          <h3 class="mt-6 mb-2 font-bold">Altimetria</h3>
-          <div class="flex h-24 items-end gap-1" role="img" aria-label="Gráfico de altimetria da trilha">
-            <span class="flex-1 rounded-t bg-floresta-100" style="height:15%"></span>
-            <span class="flex-1 rounded-t bg-floresta-100" style="height:22%"></span>
-            <span class="flex-1 rounded-t bg-floresta-100" style="height:30%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:45%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:40%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:58%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:70%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:85%"></span>
-            <span class="flex-1 rounded-t bg-floresta-800" style="height:100%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/70" style="height:80%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:60%"></span>
-            <span class="flex-1 rounded-t bg-floresta-600/50" style="height:42%"></span>
-            <span class="flex-1 rounded-t bg-floresta-100" style="height:30%"></span>
-            <span class="flex-1 rounded-t bg-floresta-100" style="height:20%"></span>
-          </div>
-          <div class="mt-1 flex justify-between text-xs text-stone-500"><span>Início</span><span>Cachoeira</span></div>
-        </section>
-
-        <section class="card p-5">
-          <h2 class="mb-3 text-xl font-bold">Avaliações <span class="font-normal text-stone-500">(4,6 de 5)</span></h2>
-          <ul class="divide-y divide-stone-200">
-            <li class="flex gap-3 py-3">
-              <div class="flex size-11 flex-none items-center justify-center rounded-full bg-terra-700 font-bold text-white">M</div>
-              <div><p class="font-bold">Marina <span class="font-normal text-stone-500">· 5 de 5</span></p><p class="text-stone-600">Vale cada passo! Cachoeira linda.</p></div>
-            </li>
-            <li class="flex gap-3 py-3">
-              <div class="flex size-11 flex-none items-center justify-center rounded-full bg-terra-700 font-bold text-white">R</div>
-              <div><p class="font-bold">Rafael <span class="font-normal text-stone-500">· 4 de 5</span></p><p class="text-stone-600">Trecho final é bem íngreme, atenção.</p></div>
-            </li>
-          </ul>
-        </section>
+    <section class="relative isolate flex min-h-[22rem] items-end overflow-hidden rounded-3xl bg-floresta-900 text-white shadow-xl md:min-h-[26rem] lg:min-h-[30rem]">
+      <img src="img/cachoeira-720.webp" srcset="img/cachoeira-720.webp 720w, img/cachoeira.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="Cachoeira descendo entre pedras cobertas de musgo na mata" fetchpriority="high" decoding="async" class="absolute inset-0 -z-20 size-full object-cover">
+      <div class="absolute inset-0 -z-10 bg-linear-to-t from-black/85 via-black/30 to-transparent" aria-hidden="true"></div>
+      <div class="w-full p-5 sm:p-8">
+        <div class="surgir flex flex-wrap gap-2">
+          <span class="badge" data-tipo>Trilha</span>
+          <span class="badge" data-variant="outline" data-nivel="moderada">Moderada</span>
+        </div>
+        <h1 class="surgir surgir-1 mt-3 text-3xl font-extrabold tracking-tight text-balance sm:text-4xl lg:text-5xl">Trilha da Cachoeira Escondida</h1>
+        <p class="surgir surgir-2 mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-white/85">
+          <span class="flex items-center gap-1.5"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Brotas, SP</span>
+          <span class="flex items-center gap-1.5"><svg class="size-4 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><strong class="text-white">4,6</strong> (128 avaliações)</span>
+        </p>
       </div>
+    </section>
 
-      <aside class="grid gap-6">
-        <section class="card p-5">
-          <h2 class="text-lg font-bold">Previsão para sábado</h2>
-          <p class="mt-1 text-3xl font-extrabold text-floresta-700">26 °C</p>
-          <p class="text-stone-600">Céu limpo, sem chuva</p>
-          <a href="saidas.html" class="btn mt-4 block">Marcar saída</a>
-          <button class="btn btn-borda mt-3 block w-full">Adicionar aos favoritos</button>
-        </section>
-        <section class="card p-5">
-          <h3 class="font-bold">Como chegar</h3>
-          <p class="mt-2 text-stone-600">Estacionamento da Fazenda Boa Vista, a 12 km do centro.</p>
+    <div class="mt-6 grid gap-6 lg:grid-cols-3 lg:items-start">
+      <aside class="lateral-fixa order-first grid gap-6 lg:order-last">
+        <section class="card">
+          <header>
+            <h2 class="flex items-center gap-2"><svg class="size-5 text-brasa-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg>Previsão para sábado</h2>
+            <p>26/09 · Brotas, SP</p>
+          </header>
+          <section class="flex items-end justify-between">
+            <p class="text-5xl font-extrabold tracking-tight">26°</p>
+            <div class="text-right text-muted-foreground"><p>Céu limpo</p><p><svg class="inline size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> 0% de chuva</p></div>
+          </section>
+          <footer class="grid gap-2">
+            <a href="criar.html" class="btn w-full" data-variant="brasa" data-size="lg"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Marcar saída</a>
+            <button type="button" class="btn w-full" data-variant="outline" data-size="lg"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>Adicionar aos favoritos</button>
+          </footer>
         </section>
       </aside>
+
+      <div class="grid gap-6 lg:col-span-2">
+        <section class="card">
+          <section>
+            <dl class="grid grid-cols-2 gap-5 sm:grid-cols-4">
+              <div><dt class="rotulo flex items-center gap-1.5"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>Distância</dt><dd class="num mt-1">6,2 km</dd></div>
+              <div><dt class="rotulo flex items-center gap-1.5"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>Subida</dt><dd class="num mt-1">320 m</dd></div>
+              <div><dt class="rotulo flex items-center gap-1.5"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Tempo médio</dt><dd class="num mt-1">2h30</dd></div>
+              <div><dt class="rotulo flex items-center gap-1.5"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg>Percurso</dt><dd class="num mt-1">Ida e volta</dd></div>
+            </dl>
+            <p class="mt-6 border-t border-border pt-5 text-base leading-relaxed text-muted-foreground">Caminho de terra em meio à mata, com travessia de riacho e uma cachoeira de 15 m no final. Leve calçado fechado, água e protetor. O último trecho tem pedras soltas.</p>
+          </section>
+        </section>
+
+        <section class="card">
+          <header>
+            <h2 id="alt-titulo">Altimetria</h2>
+            <p>Altitude (m) ao longo do percurso. Passe o mouse sobre a linha para ver cada ponto.</p>
+          </header>
+          <section>
+              <svg viewBox="0 0 600 200" class="w-full overflow-visible [&_.ponto:hover_circle+circle]:opacity-100" role="img" aria-labelledby="alt-titulo alt-desc">
+                <desc id="alt-desc">Sobe de 640 m no início até 960 m perto da cachoeira, no km 5,3, e desce um pouco até o fim.</desc>
+                <defs><linearGradient id="alt-grad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2e7d32" stop-opacity="0.28"/><stop offset="1" stop-color="#2e7d32" stop-opacity="0.02"/></linearGradient></defs>
+                <line x1="52" x2="592" y1="178.0" y2="178.0" class="stroke-border" stroke-width="1"/><text x="44" y="183.0" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">600</text><line x1="52" x2="592" y1="137.0" y2="137.0" class="stroke-border" stroke-width="1"/><text x="44" y="142.0" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">700</text><line x1="52" x2="592" y1="96.0" y2="96.0" class="stroke-border" stroke-width="1"/><text x="44" y="101.0" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">800</text><line x1="52" x2="592" y1="55.0" y2="55.0" class="stroke-border" stroke-width="1"/><text x="44" y="60.0" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">900</text><line x1="52" x2="592" y1="14.0" y2="14.0" class="stroke-border" stroke-width="1"/><text x="44" y="19.0" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">1000</text>
+                <path d="M52.0,161.6 L90.6,156.7 L129.1,150.1 L167.7,141.1 L206.3,134.9 L244.9,137.0 L283.4,125.5 L322.0,112.4 L360.6,91.1 L399.1,67.3 L437.7,40.6 L476.3,30.4 L514.9,35.3 L553.4,44.8 L592.0,54.2 L592.0,178 L52.0,178 Z" fill="url(#alt-grad)"/>
+                <path d="M52.0,161.6 L90.6,156.7 L129.1,150.1 L167.7,141.1 L206.3,134.9 L244.9,137.0 L283.4,125.5 L322.0,112.4 L360.6,91.1 L399.1,67.3 L437.7,40.6 L476.3,30.4 L514.9,35.3 L553.4,44.8 L592.0,54.2" fill="none" stroke="#256628" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <text x="52.0" y="198" text-anchor="start" class="fill-muted-foreground text-[20px] sm:text-[12px]">0 km</text><text x="322.0" y="198" text-anchor="middle" class="fill-muted-foreground text-[20px] sm:text-[12px]">2,9 km</text><text x="592.0" y="198" text-anchor="end" class="fill-muted-foreground text-[20px] sm:text-[12px]">6,2 km (cachoeira)</text>
+                <g class="ponto"><circle cx="52.0" cy="161.6" r="12" fill="transparent"/><circle cx="52.0" cy="161.6" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 0,0: 640 m</title></g><g class="ponto"><circle cx="90.6" cy="156.7" r="12" fill="transparent"/><circle cx="90.6" cy="156.7" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 0,4: 652 m</title></g><g class="ponto"><circle cx="129.1" cy="150.1" r="12" fill="transparent"/><circle cx="129.1" cy="150.1" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 0,9: 668 m</title></g><g class="ponto"><circle cx="167.7" cy="141.1" r="12" fill="transparent"/><circle cx="167.7" cy="141.1" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 1,3: 690 m</title></g><g class="ponto"><circle cx="206.3" cy="134.9" r="12" fill="transparent"/><circle cx="206.3" cy="134.9" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 1,8: 705 m</title></g><g class="ponto"><circle cx="244.9" cy="137.0" r="12" fill="transparent"/><circle cx="244.9" cy="137.0" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 2,2: 700 m</title></g><g class="ponto"><circle cx="283.4" cy="125.5" r="12" fill="transparent"/><circle cx="283.4" cy="125.5" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 2,7: 728 m</title></g><g class="ponto"><circle cx="322.0" cy="112.4" r="12" fill="transparent"/><circle cx="322.0" cy="112.4" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 3,1: 760 m</title></g><g class="ponto"><circle cx="360.6" cy="91.1" r="12" fill="transparent"/><circle cx="360.6" cy="91.1" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 3,5: 812 m</title></g><g class="ponto"><circle cx="399.1" cy="67.3" r="12" fill="transparent"/><circle cx="399.1" cy="67.3" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 4,0: 870 m</title></g><g class="ponto"><circle cx="437.7" cy="40.6" r="12" fill="transparent"/><circle cx="437.7" cy="40.6" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 4,4: 935 m</title></g><g class="ponto"><circle cx="476.3" cy="30.4" r="12" fill="transparent"/><circle cx="476.3" cy="30.4" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 4,9: 960 m</title></g><g class="ponto"><circle cx="514.9" cy="35.3" r="12" fill="transparent"/><circle cx="514.9" cy="35.3" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 5,3: 948 m</title></g><g class="ponto"><circle cx="553.4" cy="44.8" r="12" fill="transparent"/><circle cx="553.4" cy="44.8" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 5,8: 925 m</title></g><g class="ponto"><circle cx="592.0" cy="54.2" r="12" fill="transparent"/><circle cx="592.0" cy="54.2" r="4" class="fill-card stroke-floresta-700 opacity-0 transition-opacity" stroke-width="2"/><title>km 6,2: 902 m</title></g>
+              </svg>
+            <details class="mt-3 text-sm">
+              <summary class="cursor-pointer text-muted-foreground hover:text-foreground">Ver dados em tabela</summary>
+              <table class="mt-2 w-full max-w-xs"><thead><tr class="text-left text-muted-foreground"><th class="py-1 font-medium">Distância</th><th class="py-1 text-right font-medium">Altitude</th></tr></thead><tbody class="divide-y divide-border"><tr><td class="py-1">0,0 km</td><td class="py-1 text-right tabular-nums">640 m</td></tr><tr><td class="py-1">0,4 km</td><td class="py-1 text-right tabular-nums">652 m</td></tr><tr><td class="py-1">0,9 km</td><td class="py-1 text-right tabular-nums">668 m</td></tr><tr><td class="py-1">1,3 km</td><td class="py-1 text-right tabular-nums">690 m</td></tr><tr><td class="py-1">1,8 km</td><td class="py-1 text-right tabular-nums">705 m</td></tr><tr><td class="py-1">2,2 km</td><td class="py-1 text-right tabular-nums">700 m</td></tr><tr><td class="py-1">2,7 km</td><td class="py-1 text-right tabular-nums">728 m</td></tr><tr><td class="py-1">3,1 km</td><td class="py-1 text-right tabular-nums">760 m</td></tr><tr><td class="py-1">3,5 km</td><td class="py-1 text-right tabular-nums">812 m</td></tr><tr><td class="py-1">4,0 km</td><td class="py-1 text-right tabular-nums">870 m</td></tr><tr><td class="py-1">4,4 km</td><td class="py-1 text-right tabular-nums">935 m</td></tr><tr><td class="py-1">4,9 km</td><td class="py-1 text-right tabular-nums">960 m</td></tr><tr><td class="py-1">5,3 km</td><td class="py-1 text-right tabular-nums">948 m</td></tr><tr><td class="py-1">5,8 km</td><td class="py-1 text-right tabular-nums">925 m</td></tr><tr><td class="py-1">6,2 km</td><td class="py-1 text-right tabular-nums">902 m</td></tr></tbody></table>
+            </details>
+          </section>
+        </section>
+
+        <section class="card">
+          <header>
+            <h2>Avaliações</h2>
+            <p>128 pessoas avaliaram esta trilha</p>
+          </header>
+          <section class="grid gap-6 sm:grid-cols-[10rem_1fr]">
+            <div class="flex flex-row items-center gap-5 sm:flex-col sm:items-start sm:gap-3">
+              <div><p class="text-5xl font-extrabold tracking-tight">4,6</p><p class="mt-1 flex"><svg class="size-4 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-4 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-4 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-4 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-4 fill-amber-400/40 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></p></div>
+              <div class="grid flex-1 gap-1.5 sm:w-full"><div class="flex items-center gap-2 text-xs"><span class="w-3 text-muted-foreground tabular-nums">5</span><div class="vagas flex-1"><span class="bg-amber-400!" style="width:78%"></span></div><span class="w-8 text-right text-muted-foreground tabular-nums">78%</span></div><div class="flex items-center gap-2 text-xs"><span class="w-3 text-muted-foreground tabular-nums">4</span><div class="vagas flex-1"><span class="bg-amber-400!" style="width:16%"></span></div><span class="w-8 text-right text-muted-foreground tabular-nums">16%</span></div><div class="flex items-center gap-2 text-xs"><span class="w-3 text-muted-foreground tabular-nums">3</span><div class="vagas flex-1"><span class="bg-amber-400!" style="width:4%"></span></div><span class="w-8 text-right text-muted-foreground tabular-nums">4%</span></div><div class="flex items-center gap-2 text-xs"><span class="w-3 text-muted-foreground tabular-nums">2</span><div class="vagas flex-1"><span class="bg-amber-400!" style="width:1%"></span></div><span class="w-8 text-right text-muted-foreground tabular-nums">1%</span></div><div class="flex items-center gap-2 text-xs"><span class="w-3 text-muted-foreground tabular-nums">1</span><div class="vagas flex-1"><span class="bg-amber-400!" style="width:1%"></span></div><span class="w-8 text-right text-muted-foreground tabular-nums">1%</span></div></div>
+            </div>
+            <ul class="divide-y divide-border">
+              <li class="flex gap-3 py-4 first:pt-0 last:pb-0">
+                <span class="avatar" data-size="lg"><span class="bg-terra-700! font-bold text-white!">MS</span></span>
+                <div class="min-w-0">
+                  <p class="flex flex-wrap items-center gap-x-2 font-bold">Marina Souza<span class="flex" aria-label="5 de 5 estrelas"><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><span class="text-xs font-normal text-muted-foreground">há 2 dias</span></p>
+                  <p class="mt-1 text-muted-foreground">Vale cada passo! A cachoeira é linda e a água estava geladinha. Fomos cedo e pegamos o poço vazio.</p>
+                </div>
+              </li>
+              <li class="flex gap-3 py-4 first:pt-0 last:pb-0">
+                <span class="avatar" data-size="lg"><span class="bg-sky-700! font-bold text-white!">RL</span></span>
+                <div class="min-w-0">
+                  <p class="flex flex-wrap items-center gap-x-2 font-bold">Rafael Lima<span class="flex" aria-label="4 de 5 estrelas"><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 text-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><span class="text-xs font-normal text-muted-foreground">há 1 semana</span></p>
+                  <p class="mt-1 text-muted-foreground">Trilha bem marcada, mas o trecho final é íngreme e escorrega depois de chuva. Vá de tênis com boa aderência.</p>
+                </div>
+              </li>
+              <li class="flex gap-3 py-4 first:pt-0 last:pb-0">
+                <span class="avatar" data-size="lg"><span class="bg-floresta-700! font-bold text-white!">BA</span></span>
+                <div class="min-w-0">
+                  <p class="flex flex-wrap items-center gap-x-2 font-bold">Bia Andrade<span class="flex" aria-label="5 de 5 estrelas"><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><svg class="size-3.5 fill-amber-400 text-amber-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span><span class="text-xs font-normal text-muted-foreground">há 3 semanas</span></p>
+                  <p class="mt-1 text-muted-foreground">Fiz com o grupo do app e foi ótimo. Tem sombra quase o caminho todo.</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="card">
+          <header><h2 class="flex items-center gap-2"><svg class="size-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>Como chegar</h2></header>
+          <section class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-muted-foreground">Estacionamento da Fazenda Boa Vista, a 12 km do centro de Brotas. Os últimos 3 km são de terra.</p>
+            <a href="#" class="btn flex-none" data-variant="outline"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>Abrir no mapa</a>
+          </section>
+        </section>
+      </div>
     </div>
   </main>
+  <footer class="nao-imprimir mt-16 border-t border-border">
+    <div class="container-app mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-6">
+      <p><strong class="text-foreground">Trilha<span class="text-brasa-600">BR</span></strong> · Pedro Vinicius, Lucas Crempe e Vinicius Massuda · DSW2, DC-UFSCar</p>
+      <p>Fotos: Wikimedia Commons (<a href="img/CREDITOS.md" class="underline underline-offset-4 hover:text-foreground">créditos</a>)</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -2,85 +2,225 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1b5e20">
-  <title>Saídas em grupo - TrilhaBR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#256628">
+  <title>Saídas em grupo | TrilhaBR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="tailwindOutput.css" rel="stylesheet">
 </head>
-<body class="bg-areia pb-16 text-stone-900 md:pb-0">
-  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
-      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
-        <a href="index.html" class="nav-link">Explorar</a>
-        <a href="saidas.html" class="nav-link" aria-current="page">Saídas</a>
-        <a href="criar.html" class="nav-link">Criar</a>
-        <a href="perfil.html" class="nav-link">Perfil</a>
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
+  <header class="sticky top-0 z-20 border-b border-border bg-background md:bg-background/85 md:backdrop-blur-md">
+    <div class="container-app mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 lg:px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+        <span>Trilha<span class="text-brasa-600">BR</span></span>
+      </a>
+      <nav class="barra-nav md:flex md:items-center md:gap-1" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>Explorar</a>
+        <a href="saidas.html" class="nav-link" aria-current="page"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Saídas</a>
+        <a href="criar.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar</a>
+        <a href="perfil.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
       </nav>
+      <div class="flex items-center gap-3">
+        <a href="criar.html" class="btn hidden lg:inline-flex" data-variant="brasa"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar saída</a>
+        <a href="perfil.html" class="avatar" data-size="lg" aria-label="Meu perfil"><span class="bg-terra-700! font-bold text-white!">PV</span></a>
+      </div>
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl p-4">
-    <div class="flex flex-wrap items-end justify-between gap-3">
+  <main class="container-app mx-auto max-w-6xl px-4 pt-6 lg:px-6 lg:pt-10">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h1 class="text-3xl font-extrabold">Saídas em grupo</h1>
-        <p class="text-stone-600">Encontre companhia para a próxima aventura.</p>
+        <p class="text-sm font-bold tracking-widest text-brasa-600 uppercase">Comunidade</p>
+        <h1 class="mt-1 text-3xl font-extrabold tracking-tight sm:text-4xl">Saídas em grupo</h1>
+        <p class="mt-1 text-muted-foreground">Encontre companhia no seu ritmo para a próxima aventura.</p>
       </div>
-      <a href="criar.html" class="btn hidden md:inline-block">Criar nova saída</a>
+      <a href="criar.html" class="btn w-full sm:w-auto" data-variant="brasa" data-size="lg"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar nova saída</a>
     </div>
 
-    <div class="mt-4 flex gap-2 overflow-x-auto pb-2" role="group" aria-label="Filtros">
-      <button class="chip" aria-pressed="true">Próximas</button>
-      <button class="chip" aria-pressed="false">Esta semana</button>
-      <button class="chip" aria-pressed="false">Trilhas</button>
-      <button class="chip" aria-pressed="false">Corridas</button>
+    <div class="mt-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      <div class="rolagem-x flex gap-2 overflow-x-auto py-1" role="group" aria-label="Filtros">
+        <button type="button" class="chip" aria-pressed="true">Próximas</button>
+        <button type="button" class="chip" aria-pressed="false">Esta semana</button>
+        <button type="button" class="chip" aria-pressed="false">Trilhas</button>
+        <button type="button" class="chip" aria-pressed="false">Corridas</button>
+        <button type="button" class="chip" aria-pressed="false">Com vagas</button>
+      </div>
+      <p class="text-sm text-muted-foreground">6 saídas encontradas</p>
     </div>
 
-    <section class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <article class="card flex flex-col border-l-8 border-terra-700 p-5">
-        <div class="flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-moderada">Moderada</span></div>
-        <h2 class="mt-3 text-lg font-bold">Cachoeira Escondida</h2>
-        <p class="mt-1 font-semibold text-floresta-700">Sábado, 26/09 às 07h</p>
-        <p class="text-stone-600">Ponto de encontro: portão da Fazenda Boa Vista</p>
-        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Marina</strong></p>
-        <div class="mt-4">
-          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>5 de 8</strong></div>
-          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-[62%] rounded-full bg-floresta-600"></div></div>
+    <section class="grade-saidas mt-6 grid gap-5 lg:grid-cols-3">
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/cachoeira-720.webp" srcset="img/cachoeira-720.webp 720w, img/cachoeira.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Cachoeira entre pedras com musgo" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>26</b><small>set</small></div>
+          <span class="badge absolute top-3 right-3 z-10 bg-primary! text-primary-foreground!"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Confirmado</span>
         </div>
-        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Trilha</span>
+            <span class="badge" data-variant="outline" data-nivel="moderada">Moderada</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Cachoeira Escondida</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-09-26">Sábado, 07h00</time>, 26/set</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Portão da Fazenda Boa Vista</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-terra-700! text-[0.625rem]! font-bold text-white!">MS</span></span>por <strong class="text-foreground">Marina</strong></p>
+            <div class="avatar-group" aria-label="5 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span><span data-count class="size-6! text-[0.625rem]! font-bold">+2</span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">5 de 8</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="8" aria-label="Vagas preenchidas"><span class="" style="width:62%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="secondary" aria-pressed="true"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Você vai</button></footer>
       </article>
-
-      <article class="card flex flex-col border-l-8 border-sky-700 p-5">
-        <div class="flex gap-2"><span class="selo selo-corrida">Corrida</span><span class="selo selo-facil">Fácil</span></div>
-        <h2 class="mt-3 text-lg font-bold">Treino leve na Lagoa</h2>
-        <p class="mt-1 font-semibold text-floresta-700">Terça, 22/09 às 18h30</p>
-        <p class="text-stone-600">Ponto de encontro: entrada principal da Lagoa</p>
-        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Rafael</strong></p>
-        <div class="mt-4">
-          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>9 de 15</strong></div>
-          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-[60%] rounded-full bg-floresta-600"></div></div>
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/lagoa-720.webp" srcset="img/lagoa-720.webp 720w, img/lagoa.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Lago com chafarizes e árvores" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>29</b><small>set</small></div>
+          
         </div>
-        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Corrida</span>
+            <span class="badge" data-variant="outline" data-nivel="facil">Fácil</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Treino leve na Lagoa</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-09-29">Terça, 18h30</time>, 29/set</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Entrada principal do parque</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">RL</span></span>por <strong class="text-foreground">Rafael</strong></p>
+            <div class="avatar-group" aria-label="9 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span><span data-count class="size-6! text-[0.625rem]! font-bold">+6</span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">9 de 15</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="15" aria-label="Vagas preenchidas"><span class="" style="width:60%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="brasa">Quero ir</button></footer>
       </article>
-
-      <article class="card flex flex-col border-l-8 border-terra-700 p-5">
-        <div class="flex gap-2"><span class="selo selo-trilha">Trilha</span><span class="selo selo-dificil">Difícil</span></div>
-        <h2 class="mt-3 text-lg font-bold">Pico do Gavião: nascer do sol</h2>
-        <p class="mt-1 font-semibold text-floresta-700">Domingo, 27/09 às 04h30</p>
-        <p class="text-stone-600">Ponto de encontro: estacionamento da base</p>
-        <p class="mt-2 text-sm text-stone-500">Organizado por <strong class="text-stone-800">Bia</strong></p>
-        <div class="mt-4">
-          <div class="flex justify-between text-sm"><span>Vagas preenchidas</span><strong>3 de 6</strong></div>
-          <div class="mt-1 h-2 rounded-full bg-stone-200"><div class="h-2 w-1/2 rounded-full bg-floresta-600"></div></div>
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/pico-720.webp" srcset="img/pico-720.webp 720w, img/pico.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Pico de pedra ao nascer do sol" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>27</b><small>set</small></div>
+          <span class="badge absolute top-3 right-3 z-10 bg-white! text-stone-900!">Lotado</span>
         </div>
-        <a href="trilha.html" class="btn btn-verde mt-5 block">Quero ir</a>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Trilha</span>
+            <span class="badge" data-variant="outline" data-nivel="dificil">Difícil</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Pico do Gavião: nascer do sol</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-09-27">Domingo, 04h30</time>, 27/set</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Estacionamento da base</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-floresta-700! text-[0.625rem]! font-bold text-white!">BA</span></span>por <strong class="text-foreground">Bia</strong></p>
+            <div class="avatar-group" aria-label="6 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span><span data-count class="size-6! text-[0.625rem]! font-bold">+3</span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">6 de 6</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="6" aria-label="Vagas preenchidas"><span class="bg-brasa-600!" style="width:100%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="outline">Entrar na lista de espera</button></footer>
+      </article>
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/corrida-720.webp" srcset="img/corrida-720.webp 720w, img/corrida.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Corredores numa avenida" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>04</b><small>out</small></div>
+          
+        </div>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Corrida</span>
+            <span class="badge" data-variant="outline" data-nivel="moderada">Moderada</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Longão de domingo</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-10-04">Domingo, 06h00</time>, 04/out</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Portaria norte da UFSCar</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-amber-700! text-[0.625rem]! font-bold text-white!">TK</span></span>por <strong class="text-foreground">Thiago</strong></p>
+            <div class="avatar-group" aria-label="12 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span><span data-count class="size-6! text-[0.625rem]! font-bold">+9</span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">12 de 20</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="20" aria-label="Vagas preenchidas"><span class="" style="width:60%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="brasa">Quero ir</button></footer>
+      </article>
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/mirante-720.webp" srcset="img/mirante-720.webp 720w, img/mirante.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Cânion com paredões no fim de tarde" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>10</b><small>out</small></div>
+          
+        </div>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Trilha</span>
+            <span class="badge" data-variant="outline" data-nivel="facil">Fácil</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Mirante no fim de tarde</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-10-10">Sábado, 15h30</time>, 10/out</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Praça central de Analândia</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">JC</span></span>por <strong class="text-foreground">Júlia</strong></p>
+            <div class="avatar-group" aria-label="3 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">3 de 10</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="10" aria-label="Vagas preenchidas"><span class="" style="width:30%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="brasa">Quero ir</button></footer>
+      </article>
+      <article class="card revelar pt-0">
+        <div class="foto foto-sombra aspect-[16/9]">
+          <img src="img/serra-720.webp" srcset="img/serra-720.webp 720w, img/serra.webp 1600w" sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 50vw, 100vw" alt="Campo de pedras e serra ao fundo" loading="lazy" decoding="async">
+          <div class="data-bloco absolute bottom-3 left-3 z-10" aria-hidden="true"><b>12</b><small>out</small></div>
+          
+        </div>
+        <section class="grid flex-1 content-start gap-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge" data-variant="secondary">Trilha</span>
+            <span class="badge" data-variant="outline" data-nivel="dificil">Difícil</span>
+          </div>
+          <h2 class="text-lg leading-snug font-bold">Travessia da Serra das Araras</h2>
+          <ul class="grid gap-1.5 text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg><span><time datetime="2026-10-12">Domingo, 06h30</time>, 12/out</span></li>
+            <li class="flex items-center gap-2"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Rodoviária de Itirapina</li>
+          </ul>
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-3">
+            <p class="flex items-center gap-2 text-muted-foreground"><span class="avatar" data-size="sm"><span class="bg-indigo-700! text-[0.625rem]! font-bold text-white!">LF</span></span>por <strong class="text-foreground">Lucas</strong></p>
+            <div class="avatar-group" aria-label="4 pessoas confirmadas"><span class="avatar" data-size="sm"><span class="bg-emerald-700! text-[0.625rem]! font-bold text-white!">A</span></span><span class="avatar" data-size="sm"><span class="bg-sky-700! text-[0.625rem]! font-bold text-white!">C</span></span><span class="avatar" data-size="sm"><span class="bg-rose-700! text-[0.625rem]! font-bold text-white!">G</span></span><span data-count class="size-6! text-[0.625rem]! font-bold">+1</span></div>
+          </div>
+          <div>
+            <div class="mb-1.5 flex justify-between text-xs"><span class="text-muted-foreground">Vagas preenchidas</span><strong class="tabular-nums">4 de 8</strong></div>
+            <div class="vagas" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="8" aria-label="Vagas preenchidas"><span class="" style="width:50%"></span></div>
+          </div>
+        </section>
+        <footer><button type="button" class="btn w-full" data-variant="brasa">Quero ir</button></footer>
       </article>
     </section>
-
-    <a href="criar.html" class="btn mt-6 block md:hidden">Criar nova saída</a>
   </main>
+  <footer class="nao-imprimir mt-16 border-t border-border">
+    <div class="container-app mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-6">
+      <p><strong class="text-foreground">Trilha<span class="text-brasa-600">BR</span></strong> · Pedro Vinicius, Lucas Crempe e Vinicius Massuda · DSW2, DC-UFSCar</p>
+      <p>Fotos: Wikimedia Commons (<a href="img/CREDITOS.md" class="underline underline-offset-4 hover:text-foreground">créditos</a>)</p>
+    </div>
+  </footer>
 </body>
 </html>

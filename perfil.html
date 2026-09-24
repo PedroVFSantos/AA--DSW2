@@ -2,72 +2,160 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1b5e20">
-  <title>Meu perfil - TrilhaBR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#256628">
+  <title>Meu perfil | TrilhaBR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="tailwindOutput.css" rel="stylesheet">
 </head>
-<body class="bg-areia pb-16 text-stone-900 md:pb-0">
-  <header class="sticky top-0 z-20 bg-floresta-800 text-white shadow-md">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-xl font-extrabold tracking-tight">Trilha<span class="text-brasa-300">BR</span></a>
-      <nav class="fixed inset-x-0 bottom-0 flex border-t border-stone-200 bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:static md:gap-1 md:border-0 md:bg-transparent md:shadow-none">
-        <a href="index.html" class="nav-link">Explorar</a>
-        <a href="saidas.html" class="nav-link">Saídas</a>
-        <a href="criar.html" class="nav-link">Criar</a>
-        <a href="perfil.html" class="nav-link" aria-current="page">Perfil</a>
+<body class="min-h-dvh bg-background font-sans text-foreground antialiased">
+  <header class="sticky top-0 z-20 border-b border-border bg-background md:bg-background/85 md:backdrop-blur-md">
+    <div class="container-app mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 lg:px-6">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <span class="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+        <span>Trilha<span class="text-brasa-600">BR</span></span>
+      </a>
+      <nav class="barra-nav md:flex md:items-center md:gap-1" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>Explorar</a>
+        <a href="saidas.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Saídas</a>
+        <a href="criar.html" class="nav-link"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar</a>
+        <a href="perfil.html" class="nav-link" aria-current="page"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
       </nav>
+      <div class="flex items-center gap-3">
+        <a href="criar.html" class="btn hidden lg:inline-flex" data-variant="brasa"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Criar saída</a>
+        <a href="perfil.html" class="avatar" data-size="lg" aria-label="Meu perfil"><span class="bg-terra-700! font-bold text-white!">PV</span></a>
+      </div>
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl p-4">
-    <section class="card text-center">
-      <div class="h-24 bg-gradient-to-r from-floresta-800 to-floresta-600"></div>
-      <div class="-mt-12 px-5 pb-6">
-        <div class="mx-auto flex size-24 items-center justify-center rounded-full border-4 border-white bg-terra-700 text-4xl font-bold text-white shadow-md">P</div>
-        <h1 class="mt-2 text-2xl font-extrabold">Pedro</h1>
-        <p class="text-stone-600">Trilheiro e corredor · São Carlos, SP</p>
-        <dl class="mx-auto mt-5 grid max-w-md grid-cols-3">
-          <div><dd class="num-destaque">128</dd><dt class="rotulo">km percorridos</dt></div>
-          <div><dd class="num-destaque">14</dd><dt class="rotulo">trilhas</dt></div>
-          <div><dd class="num-destaque">6</dd><dt class="rotulo">saídas</dt></div>
-        </dl>
-        <a href="login.html" class="btn btn-borda mt-5">Sair</a>
+  <main class="container-app mx-auto max-w-6xl px-4 pt-4 lg:px-6 lg:pt-6">
+    <section class="card pt-0">
+      <div class="foto h-36 sm:h-48 lg:h-60">
+        <img src="img/plato-720.webp" srcset="img/plato-720.webp 720w, img/plato.webp 1600w" sizes="(min-width: 72rem) 72rem, 100vw" alt="Trilha sobre lajes de pedra com vista para as montanhas" fetchpriority="high" decoding="async">
       </div>
-    </section>
-
-    <div class="mt-6 grid gap-6 lg:grid-cols-2">
-      <section class="card p-5">
-        <h2 class="mb-3 text-xl font-bold">Conquistas</h2>
-        <div class="grid grid-cols-3 gap-3 text-center text-sm">
-          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">1ª</p>Primeira trilha</div>
-          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">500 m</p>de subida</div>
-          <div class="rounded-xl bg-floresta-50 p-3"><p class="text-2xl font-extrabold text-floresta-700">10 km</p>corridos</div>
-          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">Sol</p>Nascer do sol</div>
-          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">10</p>saídas</div>
-          <div class="rounded-xl bg-stone-100 p-3 text-stone-400"><p class="text-2xl font-extrabold">100 km</p>em trilhas</div>
+      <section class="-mt-16 flex flex-col items-center gap-4 text-center sm:-mt-12 sm:flex-row sm:items-end sm:text-left">
+        <span class="avatar size-28! ring-4 ring-card sm:size-32!"><span class="bg-terra-700! text-4xl! font-extrabold text-white!">PV</span></span>
+        <div class="flex-1 sm:pb-1">
+          <h1 class="text-2xl font-extrabold tracking-tight sm:text-3xl">Pedro Vinicius</h1>
+          <p class="mt-1 flex items-center justify-center gap-1.5 text-muted-foreground sm:justify-start"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>São Carlos, SP · Trilheiro e corredor</p>
+        </div>
+        <div class="flex gap-2 sm:pb-1">
+          <button type="button" class="btn" data-variant="outline">Editar perfil</button>
+          <a href="login.html" class="btn" data-variant="ghost"><svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>Sair</a>
         </div>
       </section>
-
-      <section class="card p-5">
-        <h2 class="mb-3 text-xl font-bold">Próximas saídas</h2>
-        <ul class="divide-y divide-stone-200">
-          <li class="flex items-center justify-between py-3"><div><p class="font-bold">Cachoeira Escondida</p><p class="text-sm text-stone-500">Sábado, 26/09 às 07h</p></div><span class="selo selo-trilha">Trilha</span></li>
-          <li class="flex items-center justify-between py-3"><div><p class="font-bold">Treino na Lagoa</p><p class="text-sm text-stone-500">Terça, 22/09 às 18h30</p></div><span class="selo selo-corrida">Corrida</span></li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="card mt-6 p-5">
-      <h2 class="mb-3 text-xl font-bold">Favoritas</h2>
-      <ul class="divide-y divide-stone-200">
-        <li class="flex items-center justify-between py-3"><a href="trilha.html" class="hover:text-floresta-700"><p class="font-bold">Serra das Araras</p><p class="text-sm text-stone-500">12 km</p></a><span class="selo selo-dificil">Difícil</span></li>
-        <li class="flex items-center justify-between py-3"><a href="trilha.html" class="hover:text-floresta-700"><p class="font-bold">Caminho do Mirante</p><p class="text-sm text-stone-500">3,4 km</p></a><span class="selo selo-facil">Fácil</span></li>
-      </ul>
+      <footer class="border-t border-border pt-6">
+        <dl class="grid w-full grid-cols-3 divide-x divide-border text-center">
+          <div><dd class="num">128</dd><dt class="rotulo">km percorridos</dt></div>
+          <div><dd class="num">14</dd><dt class="rotulo">trilhas</dt></div>
+          <div><dd class="num">6</dd><dt class="rotulo">saídas</dt></div>
+        </dl>
+      </footer>
     </section>
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-5">
+      <section class="card lg:col-span-3">
+        <header><h2 class="flex items-center gap-2"><svg class="size-5 text-brasa-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>Conquistas</h2><p>3 de 6 desbloqueadas</p></header>
+        <section>
+          <ul class="grid grid-cols-2 gap-3 xs:grid-cols-3">
+            <li class="flex flex-col items-center gap-2 rounded-xl bg-secondary p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg></span>
+              <span class="text-sm leading-tight font-bold">Primeira trilha</span><span class="text-xs text-muted-foreground">Concluída</span>
+            </li>
+            <li class="flex flex-col items-center gap-2 rounded-xl bg-secondary p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span>
+              <span class="text-sm leading-tight font-bold">500 m de subida</span><span class="text-xs text-muted-foreground">Numa só saída</span>
+            </li>
+            <li class="flex flex-col items-center gap-2 rounded-xl bg-secondary p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></svg></span>
+              <span class="text-sm leading-tight font-bold">10 km corridos</span><span class="text-xs text-muted-foreground">Concluída</span>
+            </li>
+            <li class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-input p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-muted text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+              <span class="text-sm leading-tight font-bold text-muted-foreground">Nascer do sol</span><span class="text-xs text-muted-foreground">Saída antes das 5h</span>
+            </li>
+            <li class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-input p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-muted text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>
+              <span class="text-sm leading-tight font-bold text-muted-foreground">10 saídas</span><span class="text-xs text-muted-foreground">6 de 10</span><div class="vagas mt-1 h-1.5 w-full"><span style="width:60%"></span></div>
+            </li>
+            <li class="flex flex-col items-center gap-2 rounded-xl border border-dashed border-input p-3 text-center">
+              <span class="flex size-12 items-center justify-center rounded-full bg-muted text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+              <span class="text-sm leading-tight font-bold text-muted-foreground">100 km em trilhas</span><span class="text-xs text-muted-foreground">72 de 100 km</span><div class="vagas mt-1 h-1.5 w-full"><span style="width:72%"></span></div>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <div class="grid content-start gap-6 lg:col-span-2">
+        <section class="card">
+          <header><h2 class="flex items-center gap-2"><svg class="size-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Próximas saídas</h2></header>
+          <section>
+            <ul class="grid gap-1">
+            <li>
+              <a href="saidas.html" class="flex items-center gap-3 rounded-xl p-2 -mx-2 transition-colors hover:bg-muted">
+                <div class="data-bloco size-12 bg-secondary shadow-none"><b class="text-lg">26</b><small>set</small></div>
+                <div class="min-w-0 flex-1"><p class="truncate font-bold">Cachoeira Escondida</p><p class="truncate text-muted-foreground">Sábado, 07h00 · Brotas</p></div>
+                <span class="badge" data-variant="secondary">Trilha</span>
+              </a>
+            </li>
+            <li>
+              <a href="saidas.html" class="flex items-center gap-3 rounded-xl p-2 -mx-2 transition-colors hover:bg-muted">
+                <div class="data-bloco size-12 bg-secondary shadow-none"><b class="text-lg">29</b><small>set</small></div>
+                <div class="min-w-0 flex-1"><p class="truncate font-bold">Treino leve na Lagoa</p><p class="truncate text-muted-foreground">Terça, 18h30 · São Carlos</p></div>
+                <span class="badge" data-variant="secondary">Corrida</span>
+              </a>
+            </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="card">
+          <header><h2 class="flex items-center gap-2"><svg class="size-5 text-rose-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>Favoritas</h2></header>
+          <section>
+        <ul class="grid gap-1">
+          <li>
+            <a href="trilha.html" class="flex items-center gap-3 rounded-xl p-2 -mx-2 transition-colors hover:bg-muted">
+              <div class="foto size-16 flex-none rounded-lg"><img src="img/serra-720.webp" srcset="img/serra-720.webp 720w, img/serra.webp 1600w" sizes="4rem" alt="" loading="lazy" decoding="async"></div>
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-bold">Serra das Araras</p>
+                <p class="flex items-center gap-1 text-muted-foreground"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Itirapina, SP · 12 km</p>
+              </div>
+              <span class="badge" data-variant="outline" data-nivel="dificil">Difícil</span>
+            </a>
+          </li>
+          <li>
+            <a href="trilha.html" class="flex items-center gap-3 rounded-xl p-2 -mx-2 transition-colors hover:bg-muted">
+              <div class="foto size-16 flex-none rounded-lg"><img src="img/mirante-720.webp" srcset="img/mirante-720.webp 720w, img/mirante.webp 1600w" sizes="4rem" alt="" loading="lazy" decoding="async"></div>
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-bold">Caminho do Mirante</p>
+                <p class="flex items-center gap-1 text-muted-foreground"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Analândia, SP · 3,4 km</p>
+              </div>
+              <span class="badge" data-variant="outline" data-nivel="facil">Fácil</span>
+            </a>
+          </li>
+          <li>
+            <a href="trilha.html" class="flex items-center gap-3 rounded-xl p-2 -mx-2 transition-colors hover:bg-muted">
+              <div class="foto size-16 flex-none rounded-lg"><img src="img/pico-720.webp" srcset="img/pico-720.webp 720w, img/pico.webp 1600w" sizes="4rem" alt="" loading="lazy" decoding="async"></div>
+              <div class="min-w-0 flex-1">
+                <p class="truncate font-bold">Pico do Gavião</p>
+                <p class="flex items-center gap-1 text-muted-foreground"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>São Bento do Sapucaí, SP · 9,8 km</p>
+              </div>
+              <span class="badge" data-variant="outline" data-nivel="dificil">Difícil</span>
+            </a>
+          </li>
+        </ul>
+          </section>
+        </section>
+      </div>
+    </div>
   </main>
+  <footer class="nao-imprimir mt-16 border-t border-border">
+    <div class="container-app mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-6">
+      <p><strong class="text-foreground">Trilha<span class="text-brasa-600">BR</span></strong> · Pedro Vinicius, Lucas Crempe e Vinicius Massuda · DSW2, DC-UFSCar</p>
+      <p>Fotos: Wikimedia Commons (<a href="img/CREDITOS.md" class="underline underline-offset-4 hover:text-foreground">créditos</a>)</p>
+    </div>
+  </footer>
 </body>
 </html>
