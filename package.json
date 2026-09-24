@@ -9,6 +9,7 @@
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
+    "basecoat-css": "^1.0.2",
     "tailwindcss": "^4.1.0"
   }
 }
