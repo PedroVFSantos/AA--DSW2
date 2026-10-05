@@ -23,26 +23,19 @@ Layout e telas com Tailwind CSS, sem lógica. Requisitos atendidos: R1 (identida
 - **Paleta**: verde floresta (primária), laranja brasa (chamadas para ação) e areia (fundo), com fonte Manrope e ícones Lucide (os mesmos do shadcn).
 - **Fotos reais**: fotos de trilhas brasileiras do Wikimedia Commons, em WebP, com duas versões (720px e 1600px) servidas via `srcset`. Autores e licenças estão em [`img/CREDITOS.md`](img/CREDITOS.md).
 
-## Responsividade (media queries)
+## Responsividade (mobile first)
 
-O layout é pensado primeiro para celular (*mobile first*) e usa dois tipos de breakpoint:
+O estilo base é o do celular, que é onde a maioria das pessoas vai usar o app. A partir dele, os prefixos do Tailwind (`sm:`, `md:`, `lg:`) só acrescentam o que muda quando a tela cresce. Todos geram media queries de `min-width`; não há nenhuma de `max-width`.
 
-1. **Prefixos do Tailwind no HTML** (`xs:`, `sm:`, `md:`, `lg:`), que geram media queries de `min-width`. Além dos padrões, criamos `xs` (480px) e `3xl` (1792px) no `@theme`.
-2. **Media queries escritas à mão** na seção 3 de `tailwindInput.css`:
+| Tela | Prefixo (media query) | O que muda |
+|---|---|---|
+| Celular | sem prefixo (base) | Menu fixo no rodapé; hero com o texto embaixo; filtros rolam na horizontal; tudo em 1 coluna |
+| Tablet | `md:` (`min-width: 48rem`, 768px) | Menu sobe para o cabeçalho; degradê do hero passa a ser lateral; saídas em 2 colunas |
+| Desktop | `lg:` (`min-width: 64rem`, 1024px) | Hero mais alto; saídas em 3 colunas; coluna lateral fixa (*sticky*) ao rolar |
 
-| Media query | O que muda |
-|---|---|
-| `max-width: 47.99rem` (celular) | Menu vira barra fixa no rodapé; degradê do hero vem de baixo; filtros rolam na horizontal |
-| `min-width: 48rem` (tablet+) | Degradê do hero passa a ser lateral |
-| `48rem` a `63.99rem` (tablet) | Saídas em 2 colunas |
-| `min-width: 64rem` (desktop) | Hero mais alto; coluna lateral fica fixa (*sticky*) ao rolar |
-| `min-width: 112rem` (telas largas) | Conteúdo mais largo |
-| `orientation: landscape` e `max-height: 30rem` | Celular deitado: hero compacto e menu não fixo |
-| `hover: hover` e `pointer: fine` | Efeitos de hover só em aparelhos com mouse |
-| `prefers-reduced-motion` | Animações desligadas para quem pediu menos movimento |
-| `print` | Impressão sem menu e sem sombras |
+O `tailwindInput.css` guarda só a identidade visual (fonte, cores e a animação de entrada). O resto do estilo está nas classes do Tailwind direto no HTML, e na AA2 cada bloco repetido (link do menu, filtro, card) vira um componente React.
 
-Tudo continua sem JavaScript: os cards de opção do formulário usam `:has(:checked)` e as animações de entrada usam CSS (incluindo `animation-timeline: view()` onde o navegador suporta).
+Tudo continua sem JavaScript: os cards de opção do formulário usam `has-checked:` (`:has(:checked)`) e as animações de entrada são feitas só com CSS.
 
 ## Como rodar
 
@@ -57,7 +50,7 @@ Com o comando acima rodando, abra o `index.html` no navegador (por exemplo, com 
 npm run build
 ```
 
-Os estilos ficam em `tailwindInput.css` e o resultado gerado em `tailwindOutput.css`. O `npm install` também instala o Basecoat (`basecoat-css`), que o CSS importa.
+As cores ficam em `tailwindInput.css` e o CSS gerado em `tailwindOutput.css`. O `npm install` também instala o Basecoat (`basecoat-css`), que o CSS importa.
 
 ## Próxima fase: AA2 (React)
 
