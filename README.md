@@ -60,4 +60,4 @@ Lógica do app com React, acesso à rede (back-end simulado), geolocalização p
 
 - Pedro Vinicius (831601)
 - Lucas Crempe (828519)
-- Vinicius Massuda (834426)
+- Vinicius Yuya Massuda (834426)
